@@ -11,7 +11,7 @@
 #define      macUser_ESP8266_ApSsid                       "ynao"                //要连接的热点的名称Netcoreasd
 #define      macUser_ESP8266_ApPwd                        "ynao246135"           //要连接的热点的密钥dyc1102004097
 
-#define      macUser_ESP8266_TcpServer_IP                 "192.168.75.24"      //要连接的服务器的 IP
+#define      macUser_ESP8266_TcpServer_IP                 "192.168.80.89"      //要连接的服务器的 IP
 #define      macUser_ESP8266_TcpServer_Port               "8080"               //要连接的服务器的端口
 
 

@@ -31,28 +31,28 @@ void Movestep(void)
 	/* 00 */
 	GPIO_ResetBits(GPIOA, GPIO_Pin_2);
 	GPIO_ResetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
 	/* 01 */
 	GPIO_ResetBits(GPIOA, GPIO_Pin_2);
 	GPIO_SetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
 	/* 11 */
 	GPIO_SetBits(GPIOA, GPIO_Pin_2);
 	GPIO_SetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
 	/* 10 */
 	GPIO_SetBits(GPIOA, GPIO_Pin_2);
 	GPIO_ResetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
@@ -71,28 +71,28 @@ void BackMovestep( void )
 	/* 10 */
 	GPIO_SetBits(GPIOA, GPIO_Pin_2);
 	GPIO_ResetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 	
 	/* 11 */
 	GPIO_SetBits(GPIOA, GPIO_Pin_2);
 	GPIO_SetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
 	/* 01 */
 	GPIO_ResetBits(GPIOA, GPIO_Pin_2);
 	GPIO_SetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
     /* 00 */
 	GPIO_ResetBits(GPIOA, GPIO_Pin_2);
 	GPIO_ResetBits(GPIOA, GPIO_Pin_3);
-	Delay_ms(50);
+	Delay_ms(100);
 	if (1 == StopFlag)
 		return;
 
@@ -149,7 +149,7 @@ void ESP8266_StaTcpClient_UnvarnishTest ( void )
 			
 			strEsp8266_Fram_Record .Data_RX_BUF [ strEsp8266_Fram_Record .InfBit .FramLength - 1 ] = '\0';
 		
-			while ( DivideCounter < 25)    //һȦ5
+			while ( DivideCounter < 10)    //һȦ5
 			{		
 				Movestep();
 
@@ -178,7 +178,7 @@ void ESP8266_StaTcpClient_UnvarnishTest ( void )
 				
 			strEsp8266_Fram_Record .Data_RX_BUF [ strEsp8266_Fram_Record .InfBit .FramLength - 1 ] = '\0';
 			
-			while ( DivideCounter < 25)	  //һȦ5
+			while ( DivideCounter < 10)	  //һȦ5
 			{		
 				BackMovestep();	
 
